@@ -44,8 +44,8 @@ PAGES = {
                cards=[
                    ("Your music", "Add audio files you own. HexBeat maps every beat into punches on five levels and "
                                   "recognizes the song to show its cover and artist."),
-                   ("A real workout", "Watch your calories live in the arena and save each song as a boxing workout in the "
-                                      "Health app."),
+                   ("A real workout", "Watch your calories live in the arena and save a whole session, or each song, as a "
+                                      "boxing workout in the Health app."),
                    ("Fits your space", "Set the distance, height and size of the hexagon. Play in your room or inside the "
                                        "HexBeat arena. No controllers needed."),
                ],
