@@ -1,0 +1,91 @@
+/* HexBeat "Neon Pulse": ink night, three electric hues, gold for perfection (app/HexBeat/Design/Theme.swift). */
+:root {
+  --ink: #07080f;
+  --night: #11142b;
+  --pulse: #36f1ff;
+  --volt: #7c5cff;
+  --heat: #ff3d9a;
+  --gold: #ffd54a;
+  --text: #eef0ff;
+  --muted: rgba(238, 240, 255, 0.68);
+  --line: rgba(124, 92, 255, 0.28);
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--text);
+  font: 18px/1.6 -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+  padding: 32px 16px;
+}
+a { color: var(--pulse); }
+h1, h2, h3 { line-height: 1.15; }
+.display, .landing h1, .landing h2, .page h1 {
+  font-family: "SF Pro Display", -apple-system, system-ui, sans-serif;
+  font-weight: 900;
+  font-stretch: expanded;
+  letter-spacing: -0.01em;
+}
+
+/* Support and privacy */
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(124, 92, 255, 0.10), rgba(17, 20, 43, 0.9) 220px), var(--night);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px clamp(20px, 6vw, 56px) 48px;
+}
+.page h1 { font-size: 2.1em; margin: 0.3em 0 0.1em; }
+.page h2 { font-size: 0.95em; margin-top: 2em; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pulse); }
+.page h3 { font-size: 1em; margin: 1.4em 0 0.2em; }
+.page p, .page li { margin: 0.4em 0; }
+.meta, .small { color: var(--muted); font-size: 0.85em; }
+.small { margin-top: 2.5em; }
+
+/* Landing page (build.py) */
+body.landing {
+  padding: 0;
+  background: radial-gradient(ellipse 70% 45% at 50% 0%, rgba(124, 92, 255, 0.22), transparent 70%), var(--ink);
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+.hero { text-align: center; padding: 48px 16px 8px; }
+.app-icon { display: block; width: 96px; height: 96px; margin: 0 auto 20px; border-radius: 50%;
+            box-shadow: 0 0 40px rgba(54, 241, 255, 0.35); }
+.landing h1 {
+  font-size: clamp(2.8rem, 9vw, 5rem);
+  margin: 0;
+  color: transparent;
+  background: linear-gradient(90deg, var(--pulse), var(--volt) 55%, var(--heat));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.landing h2 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); margin: 0 0 0.4em; }
+.tagline { font-size: clamp(1.15rem, 2.8vw, 1.5rem); max-width: 30ch; margin: 0.3em auto 1em; color: var(--text); }
+.badge img { display: block; margin: 0 auto 16px; }
+.facts { font: 600 12px/1.5 -apple-system, system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase;
+         color: var(--pulse); }
+.key-art { display: block; width: 100%; height: auto; margin-top: 16px; }
+.landing section { padding: 56px 0; border-top: 1px solid var(--line); }
+.landing section:first-child { border-top: 0; }
+.landing section p, .landing li { color: var(--muted); }
+.feature { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: center; }
+.feature.flip { grid-template-columns: 1.4fr 1fr; }
+.feature.flip > div { order: 2; }
+.feature figure { margin: 0; }
+.feature img { display: block; width: 100%; height: auto; border-radius: 18px;
+               box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--line); }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cards div { padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: rgba(17, 20, 43, 0.7); }
+.cards h3 { margin: 0 0 0.3em; color: var(--text); }
+.requirements ul { margin: 0.6em 0; padding-left: 1.2em; }
+.cta { text-align: center; }
+.cta p { margin-bottom: 1.2em; }
+footer.site { padding: 32px 16px 48px; border-top: 1px solid var(--line); font-size: 0.8em; color: var(--muted); }
+@media (max-width: 760px) {
+  .feature, .feature.flip { grid-template-columns: 1fr; gap: 24px; }
+  .feature.flip > div { order: 0; }
+  .landing section { padding: 40px 0; }
+  .cards { grid-template-columns: 1fr; }
+}
